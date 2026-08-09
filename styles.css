@@ -107,6 +107,72 @@ button {
   color: var(--white);
 }
 
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-toggle {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+}
+
+.nav-dropdown-toggle:hover {
+  color: var(--accent);
+}
+
+.caret {
+  font-size: 11px;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  margin-top: 10px;
+  background: rgba(15, 32, 39, 0.98);
+  border: 1px solid var(--white-15);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  z-index: 300;
+}
+
+.nav-dropdown.open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-dropdown-menu a:hover {
+  background: var(--white-08);
+  color: var(--accent);
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -744,6 +810,30 @@ button {
     margin-top: 10px;
   }
 
+  .nav-dropdown-toggle {
+    width: 100%;
+    padding: 12px 4px;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--white-15);
+  }
+
+  .nav-dropdown-menu {
+    position: static;
+    min-width: 0;
+    margin: 0 0 6px 12px;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    opacity: 1;
+    visibility: hidden;
+    transform: none;
+  }
+
+  .nav-dropdown.open .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .hero-inner {
     padding: 80px 24px 70px;
   }
@@ -768,4 +858,164 @@ button {
   .bio-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---------- PÁGINAS DE APPS ---------- */
+.page-app {
+  padding: 70px 0 90px;
+}
+
+.app-hero {
+  text-align: center;
+  padding: 60px 24px 10px;
+}
+
+.app-hero .apps-badge {
+  margin-bottom: 22px;
+}
+
+.app-hero h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.app-hero .apps-sub {
+  margin-bottom: 18px;
+}
+
+.app-status {
+  display: inline-block;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.app-status.live {
+  background: rgba(37, 211, 102, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+}
+
+.app-status.wip {
+  background: rgba(255, 215, 0, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(255, 215, 0, 0.35);
+}
+
+.app-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.app-content h2 {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 34px 0 14px;
+}
+
+.app-content p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.app-grid-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+  margin: 18px 0;
+}
+
+.app-feature {
+  background: var(--white-08);
+  border: 1px solid var(--white-15);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.app-feature .service-icon {
+  margin-bottom: 12px;
+}
+
+.app-feature h3 {
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.app-feature p {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+.app-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0 6px;
+}
+
+.app-tech span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(255, 215, 0, 0.12);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+.app-cta {
+  text-align: center;
+  margin-top: 44px;
+}
+
+.app-cta h2 {
+  margin-top: 0;
+}
+
+.app-cta .btn {
+  min-width: 260px;
+  margin: 8px;
+}
+
+.back-link {
+  display: inline-block;
+  margin: 40px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.wip-box {
+  background: var(--white-08);
+  border: 1px dashed rgba(255, 215, 0, 0.45);
+  border-radius: var(--radius);
+  padding: 36px;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.wip-box .apps-badge {
+  margin-bottom: 18px;
+}
+
+.wip-box h2 {
+  margin-top: 0;
+}
+
+.wip-box p {
+  max-width: 480px;
+  margin: 0 auto;
 }

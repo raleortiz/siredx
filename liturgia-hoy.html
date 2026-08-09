@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liturgia Hoy | Raúl Alejandro Ortiz</title>
+  <meta name="description" content="App para la parroquia: liturgia del día, lecturas y canciones siempre a la mano, con soporte sin conexión.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">RAO<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Inicio</a>
+        <a href="index.html#servicios">Servicios</a>
+        <div class="nav-dropdown open" id="navDropdown">
+          <button class="nav-dropdown-toggle" id="appsToggle" aria-expanded="true">
+            Mis Apps <span class="caret">▾</span>
+          </button>
+          <div class="nav-dropdown-menu" id="appsMenu">
+            <a href="gestion-mipymes.html">Gestión Mipymes</a>
+            <a href="liturgia-hoy.html">Liturgia Hoy</a>
+            <a href="rastreo-automovil.html">Rastreo Automóvil</a>
+          </div>
+        </div>
+        <a href="index.html#plc">Proyecto PLC</a>
+        <a href="index.html#sobre-mi">Sobre mí</a>
+        <a href="index.html#contacto" class="nav-cta">Contacto</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="app-hero">
+      <div class="apps-badge">⛪</div>
+      <h1>Liturgia Hoy</h1>
+      <p class="apps-sub">La liturgia del día, siempre a la mano</p>
+      <span class="app-status live">✅ Disponible</span>
+    </section>
+
+    <div class="container page-app">
+      <div class="app-content">
+        <h2>Una app para la comunidad</h2>
+        <p>
+          Liturgia Hoy es una aplicación móvil desarrollada para la Parroquia San Ter de Jesús. Lleva la liturgia del
+          día a los fieles directamente al celular: lecturas, salmo, evangelio y el cancionero de la comunidad, todo
+          en un solo lugar y sin necesidad de estar conectado.
+        </p>
+
+        <div class="app-grid-features">
+          <div class="app-feature">
+            <div class="service-icon">📖</div>
+            <h3>Liturgia del día</h3>
+            <p>Lecturas y evangelio actualizados automáticamente cada día.</p>
+          </div>
+          <div class="app-feature">
+            <div class="service-icon">🎵</div>
+            <h3>Cancionero</h3>
+            <p>Canciones de la comunidad organizadas y siempre disponibles.</p>
+          </div>
+          <div class="app-feature">
+            <div class="service-icon">📴</div>
+            <h3>Funciona sin conexión</h3>
+            <p>Caché inteligente de 3 niveles: memoria, disco y servidor.</p>
+          </div>
+          <div class="app-feature">
+            <div class="service-icon">📡</div>
+            <h3>Actualización diaria</h3>
+            <p>Un proceso automático trae la liturgia de hoy desde fuentes oficiales.</p>
+          </div>
+        </div>
+
+        <div class="app-cta">
+          <h2>¿Tu comunidad también la necesita?</h2>
+          <p>Adapto este sistema para cualquier parroquia o comunidad.</p>
+          <button class="btn btn-whatsapp" id="btnWhatsApp">Escríbeme por WhatsApp</button>
+          <br>
+          <a href="index.html" class="back-link">← Volver al inicio</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Raúl Alejandro Ortiz Bermúdez · Mantenimiento Industrial y Producción</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

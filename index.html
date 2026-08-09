@@ -15,7 +15,16 @@
       <nav class="nav-links" id="navLinks">
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
-        <a href="#apps">Mis Apps</a>
+        <div class="nav-dropdown" id="navDropdown">
+          <button class="nav-dropdown-toggle" id="appsToggle" aria-expanded="false">
+            Mis Apps <span class="caret">▾</span>
+          </button>
+          <div class="nav-dropdown-menu" id="appsMenu">
+            <a href="gestion-mipymes.html">Gestión Mipymes</a>
+            <a href="liturgia-hoy.html">Liturgia Hoy</a>
+            <a href="rastreo-automovil.html">Rastreo Automóvil</a>
+          </div>
+        </div>
         <a href="#plc">Proyecto PLC</a>
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#contacto" class="nav-cta">Contacto</a>
@@ -81,6 +90,11 @@
             <div class="service-icon">🤖</div>
             <h3>Automatización y SCADA</h3>
             <p>Automatización básica, integración de variadores de frecuencia y sistemas SCADA para modernizar tu planta paso a paso.</p>
+          </article>
+          <article class="card-service">
+            <div class="service-icon">📱</div>
+            <h3>Web y App para tu negocio</h3>
+            <p>Página web profesional y app Android a la medida para que tu pequeño negocio venda y se haga visible en internet, así como esta misma página.</p>
           </article>
         </div>
       </div>
